@@ -1,0 +1,7 @@
+1. KERN_ALERT hace que aparezca el mensaje en rojo en el log del kernel. Se debe tener cuidado, pues sudo dmesg | tail no muestra colores.
+
+2. Si la función de carga del módulo devuelve un número negativo, en la consola salta el error "insmod: ERROR: could not insert module mi_modulo.ko: Operation not permitted" y el módulo no se carga.
+
+3. Para poner parámetros primero se definen como variables globales, luego se llama a la función module_param() o module_param_array(). Ahora se hace insmod modulo.ko variable1="hola" variable2=3 varArray=1,2 (varArray[0] = 1, varArray[1] = 2. El tamaño solo puede llegar hasta el establecido en el código). En el caso de module_param_array el tercer parámetro guarda el número de parámetros que recibe.
+
+4. which busca donde están los ejecutables (which ls). Hacemos stat `which lsmod`, lo que permite ver que es un enlace simbólico de kmod. No se puede cargar un módulo desde kmod, la única forma es llamando insmod. Lo único que se puede hacer es kmod list, que equivale a lsmod.
