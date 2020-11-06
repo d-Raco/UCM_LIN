@@ -1,0 +1,35 @@
+diff -urpN /home/kernel/Documentos/mod2/linux-4.9.111/linux-4.9.111/arch/x86/entry/syscalls/syscall_64.tbl /home/kernel/build/linux-4.9.111/arch/x86/entry/syscalls/syscall_64.tbl
+--- /home/kernel/Documentos/mod2/linux-4.9.111/linux-4.9.111/arch/x86/entry/syscalls/syscall_64.tbl	2018-07-03 11:23:18.000000000 +0200
++++ /home/kernel/build/linux-4.9.111/arch/x86/entry/syscalls/syscall_64.tbl	2020-11-06 16:44:52.010095913 +0100
+@@ -338,6 +338,7 @@
+ 329	common	pkey_mprotect		sys_pkey_mprotect
+ 330	common	pkey_alloc		sys_pkey_alloc
+ 331	common	pkey_free		sys_pkey_free
++332	common 	lin_hello		sys_lin_hello
+ 
+ #
+ # x32-specific system call numbers start at 512 to avoid cache impact
+diff -urpN /home/kernel/Documentos/mod2/linux-4.9.111/linux-4.9.111/kernel/Makefile /home/kernel/build/linux-4.9.111/kernel/Makefile
+--- /home/kernel/Documentos/mod2/linux-4.9.111/linux-4.9.111/kernel/Makefile	2018-07-03 11:23:18.000000000 +0200
++++ /home/kernel/build/linux-4.9.111/kernel/Makefile	2020-11-06 16:44:07.694676878 +0100
+@@ -9,7 +9,7 @@ obj-y     = fork.o exec_domain.o panic.o
+ 	    extable.o params.o \
+ 	    kthread.o sys_ni.o nsproxy.o \
+ 	    notifier.o ksysfs.o cred.o reboot.o \
+-	    async.o range.o smpboot.o ucount.o
++	    async.o range.o smpboot.o ucount.o mysyscall.o
+ 
+ obj-$(CONFIG_MULTIUSER) += groups.o
+ 
+diff -urpN /home/kernel/Documentos/mod2/linux-4.9.111/linux-4.9.111/kernel/mysyscall.c /home/kernel/build/linux-4.9.111/kernel/mysyscall.c
+--- /home/kernel/Documentos/mod2/linux-4.9.111/linux-4.9.111/kernel/mysyscall.c	1970-01-01 01:00:00.000000000 +0100
++++ /home/kernel/build/linux-4.9.111/kernel/mysyscall.c	2020-10-30 11:42:00.123832000 +0100
+@@ -0,0 +1,7 @@
++#include <linux/syscalls.h> /* For SYSCALL_DEFINEi() */
++#include <linux/kernel.h>
++
++SYSCALL_DEFINE0(lin_hello) {
++	printk(KERN_DEBUG "Hello world\n");
++	return 0;
++}
+\ No hay ningún carácter de nueva línea al final del fichero

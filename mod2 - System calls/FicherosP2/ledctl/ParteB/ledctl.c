@@ -6,9 +6,11 @@
 #include <linux/vt_kern.h>
 #include <asm-generic/errno.h>
 
-MODULE_LICENSE("GPL");
-MODULE_DESCRIPTION("Leds controller system call - Arquitectura Interna de Linux y Android UCM");
-MODULE_AUTHOR("Ramón Costales de Ledesma, José Ignacio Daguerre Garrido");
+/*
+Description: Leds controller invoke programm - Arquitectura Interna de Linux y Android UCM
+Authors: Ramón Costales de Ledesma, José Ignacio Daguerre Garrido
+License: GPL
+*/
 
 /* Get driver handler */
 struct tty_driver* get_kbd_driver_handler(void){
@@ -33,8 +35,7 @@ SYSCALL_DEFINE1(ledctl,unsigned int,leds){
 	}
 
 	/* Gets the handler and turns on the leds specified by the leds variable */
-	kbd_driver = get_kbd_driver_handler();
-   	set_leds(kbd_driver, leds); 
-   
-   	return 0;
+	kbd_driver = get_kbd_driver_handler();	
+   	
+   	return set_leds(kbd_driver, (leds & 1 | ((leds & (1<<1)) << 1) | ((leds & (1<<2)) >> 1))); 
 }

@@ -3,12 +3,14 @@
 #include <unistd.h>
 #include <stdio.h>
 
-MODULE_LICENSE("GPL");
-MODULE_DESCRIPTION("Leds controller invoke programm - Arquitectura Interna de Linux y Android UCM");
-MODULE_AUTHOR("Ramón Costales de Ledesma, José Ignacio Daguerre Garrido");
+/*
+Description: Leds controller invoke programm - Arquitectura Interna de Linux y Android UCM
+Authors: Ramón Costales de Ledesma, José Ignacio Daguerre Garrido
+License: GPL
+*/
 
 /* Usage:  
-	gcc -Wall -g ledctl_invoke.c -o ledct_invoke   	//Compiles the programm
+	gcc -Wall -g ledctl_invoke.c -o ledctl_invoke   	//Compiles the programm
 	sudo ./ledctl_invoke 0x5						//Turns on some leds
 	sudo ./ledctl_invoke 0x0						//Turns off all leds
 	sudo ./ledctl_invoke 0x7						//Turns on all leds
@@ -28,7 +30,7 @@ int main(int argc, char **argv) {
 	/* Check if there's only  one argument */
 	if(argc < 2 || argc > 2){
 		printf("Usage: ./ledctl_invoke <ledmask>\n");
-		return -1;
+		return 1;
 	}
 	
 	/* Convert into unsigned int */
@@ -37,7 +39,7 @@ int main(int argc, char **argv) {
 	/* Calls the ledctl sys_call and checks for errors */
 	if(lin_ledctl(leds) < 0){
 		perror("Failed to light up the leds...");
-		return -1;
+		return 2;
 	}
 
 	/* Prints which leds have turned on */
