@@ -1,0 +1,4 @@
+user.c es un programa de usuario que crear 4 entradas en /proc/multipc. Estas entradas van a tener los nombres a, b, c y d. Se van a ir creando con tipos alternados: el priemro de tipo i, el segundo de tipo s...
+Al crearse cada entrada, se va a crear un thread consumidor y productor de esa entrada.
+El productor producirá 4 números o palabras y el consumidor las consumirá.
+Finalmente se eliminan las entradas.
