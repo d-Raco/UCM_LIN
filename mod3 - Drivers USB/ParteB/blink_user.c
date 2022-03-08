@@ -9,7 +9,7 @@
 /*
  * Simple user program for interacting with the driver for the Blinkstick Strip USB device (v1.0)
  *
- * Programmed by Ramón Costales and Jose Ignacio Daguerre
+ * Programmed by Rymond3 and joseignaciodg
  * 
  *	This program is free software; you can redistribute it and/or
  *	modify it under the terms of the GNU General Public License as
