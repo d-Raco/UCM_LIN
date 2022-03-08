@@ -8,7 +8,7 @@
 
 MODULE_LICENSE("GPL");
 MODULE_DESCRIPTION("Linked List Module - Arquitectura Interna de Linux y Android UCM");
-MODULE_AUTHOR("Ramón Costales de Ledesma, José Ignacio Daguerre Garrido");
+MODULE_AUTHOR("Rymond3, joseignaciodg");
 
 /* Usage:
 	> make								//compiles program
