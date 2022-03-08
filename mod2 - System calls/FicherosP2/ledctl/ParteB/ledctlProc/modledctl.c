@@ -9,7 +9,7 @@
 
 MODULE_LICENSE("GPL");
 MODULE_DESCRIPTION("Leds controller via /proc file module - Arquitectura Interna de Linux y Android UCM");
-MODULE_AUTHOR("Ramón Costales de Ledesma, José Ignacio Daguerre Garrido");
+MODULE_AUTHOR("Rymond3, joseignaciodg");
 
 /* Usage:
 	make
