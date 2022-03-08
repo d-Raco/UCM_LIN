@@ -2,7 +2,7 @@
  * Simple driver for the Blinkstick Strip USB device (v1.0)
  *
  * Copyright (C) 2018 Juan Carlos Saez (jcsaezal@ucm.es)
- * Edited by Ramón Costales and Jose Ignacio Daguerre
+ * Edited by Rymond3 and joseignaciodg
  *	This program is free software; you can redistribute it and/or
  *	modify it under the terms of the GNU General Public License as
  *	published by the Free Software Foundation, version 2.
