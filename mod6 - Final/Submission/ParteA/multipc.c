@@ -12,7 +12,7 @@
 
 MODULE_LICENSE("GPL");
 MODULE_DESCRIPTION("Multi producer-consumer Kernel Module - Arquitectura Interna de Linux y Android UCM");
-MODULE_AUTHOR("Ramón Costales de Ledesma");
+MODULE_AUTHOR("Rymond3");
 
 #define MAX_CHARS_KBUF	20
 #define MAX_CHARS_ADMIN 20
