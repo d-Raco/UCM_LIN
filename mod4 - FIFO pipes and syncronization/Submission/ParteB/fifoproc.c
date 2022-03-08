@@ -8,7 +8,7 @@
 
 MODULE_LICENSE("GPL");
 MODULE_DESCRIPTION("Implementation of a FIFO pipe via /proc entry - Arquitectura Interna de Linux y Android UCM");
-MODULE_AUTHOR("Ramón Costales de Ledesma, José Ignacio Daguerre Garrido");
+MODULE_AUTHOR("Rymond3, joseignaciodg");
 
 #define MAX_KBUF	64
 #define MAX_ITEMS_CBUF 64
