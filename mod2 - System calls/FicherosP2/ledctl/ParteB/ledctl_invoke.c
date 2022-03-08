@@ -5,7 +5,7 @@
 
 /*
 Description: Leds controller invoke programm - Arquitectura Interna de Linux y Android UCM
-Authors: Ramón Costales de Ledesma, José Ignacio Daguerre Garrido
+Authors: Rymond3
 License: GPL
 */
 
