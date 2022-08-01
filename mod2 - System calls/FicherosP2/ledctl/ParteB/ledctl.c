@@ -8,7 +8,7 @@
 
 /*
 Description: Leds controller invoke programm - Arquitectura Interna de Linux y Android UCM
-Authors: Rymond3 and joseignaciodg
+Authors: d-Raco and joseignaciodg
 License: GPL
 */
 
