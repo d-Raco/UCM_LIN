@@ -8,7 +8,7 @@
 
 MODULE_LICENSE("GPL");
 MODULE_DESCRIPTION("Linked List Module - Arquitectura Interna de Linux y Android UCM");
-MODULE_AUTHOR("Rymond3, joseignaciodg");
+MODULE_AUTHOR("d-Raco, joseignaciodg");
 
 /* Usage:
 	> make										//compiles program (int list)
