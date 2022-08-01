@@ -10,7 +10,7 @@
 
 MODULE_LICENSE("GPL");
 MODULE_DESCRIPTION("Implementation of a FIFO pipe via /dev entry - Arquitectura Interna de Linux y Android UCM");
-MODULE_AUTHOR("Rymond3, joseignaciodg");
+MODULE_AUTHOR("d-Raco, joseignaciodg");
 
 /*
 make
