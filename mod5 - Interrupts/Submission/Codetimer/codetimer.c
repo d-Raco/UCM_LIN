@@ -15,7 +15,7 @@
 
 MODULE_LICENSE("GPL");
 MODULE_DESCRIPTION("codetimer Module - Arquitectura de Linux y Android");
-MODULE_AUTHOR("Rymond3, joseignaciodg");
+MODULE_AUTHOR("d-Raco, joseignaciodg");
 
 #define CBUF_SIZE 32
 #define MAX_CHARS 40
