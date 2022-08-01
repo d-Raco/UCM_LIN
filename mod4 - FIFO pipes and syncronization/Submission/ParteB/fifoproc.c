@@ -8,7 +8,7 @@
 
 MODULE_LICENSE("GPL");
 MODULE_DESCRIPTION("Implementation of a FIFO pipe via /proc entry - Arquitectura Interna de Linux y Android UCM");
-MODULE_AUTHOR("Rymond3, joseignaciodg");
+MODULE_AUTHOR("d-Raco, joseignaciodg");
 
 #define MAX_KBUF	64
 #define MAX_ITEMS_CBUF 64
